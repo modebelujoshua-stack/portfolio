@@ -642,80 +642,93 @@ h2 em {
 
 /* Contact Form */
 .contact-section {
-  background: #000;
-  padding: 80px 20px;
-  font-family: Arial, sans-serif;
+  background: var(--bg);
+  padding: 5.5rem 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 460px;
+  width: 100%;
+  margin: 2rem auto 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.16);
 }
 
 .contact-form {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 35px;
+  gap: 0.65rem;
+  margin-bottom: 0;
 }
 
 .form-group label {
-  display: block;
-  color: #b58a43;
-  font-size: 14px;
-  letter-spacing: 4px;
-  margin-bottom: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background: rgba(20, 20, 20, 0.95);
-  border: 1px solid rgba(181, 138, 67, 0.2);
-  color: #d4d4d4;
-  padding: 22px 24px;
-  font-size: 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-bright);
+  padding: 0.95rem 1.1rem;
+  font-size: 0.95rem;
   outline: none;
-  transition: 0.3s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
   box-sizing: border-box;
+  border-radius: 16px;
 }
 
 .form-group textarea {
   resize: vertical;
-  min-height: 220px;
+  min-height: 180px;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #7c7c7c;
+  color: var(--text-dim);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #d89d2d;
+  border-color: var(--amber-light);
+  box-shadow: 0 0 0 6px rgba(212, 149, 42, 0.08);
 }
 
 .send-btn {
-  width: 100%;
-  background: #d89d2d;
-  color: #000;
+  width: auto;
+  min-width: 220px;
+  align-self: flex-start;
+  background: var(--amber);
+  color: #0e0d0b;
   border: none;
-  padding: 22px;
-  font-size: 18px;
-  letter-spacing: 3px;
+  border-radius: 18px;
+  padding: 0.95rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: transform 0.2s ease, background 0.25s ease;
 }
 
 .send-btn:hover {
-  background: #f0b13a;
+  background: var(--amber-light);
+  transform: translateY(-2px);
 }
 
 .form-status {
